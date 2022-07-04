@@ -12,15 +12,15 @@
             <th scope="col">First Name</th>
             <th scope="col">Middle Name</th>
             <th scope="col">Price</th>
-            <th scope="col">Created At</th>
             <th scope="col">Delivery Address</th>
+            <th scope="col">Created At</th>
         </tr>
         </thead>
         <tbody>
         @foreach($orders as $order)
             <tr>
                 <th scope="row">{{$order->id}}</th>
-                <td>{{$order->last_name}}</td>
+                <td><a href="/orders/{{$order->id}}">{{$order->last_name}}</td>
                 <td>{{$order->first_name}}</td>
                 <td>{{$order->middle_name}}</td>
                 <td>{{$order->price}}</td>
